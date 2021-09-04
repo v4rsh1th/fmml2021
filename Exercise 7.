@@ -1,0 +1,130 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "07_Defining_Functions.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/v4rsh1th/fmml2021/blob/main/Exercise%207.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1pqsgNqwnbHE",
+        "outputId": "1f3835b7-4020-4850-d296-6a43ec3ec966",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "def inList (my_char, my_list=['a','e','i','o','u']):\n",
+        "  \"\"\" this is a function to check whether a char is vowel or not \"\"\"\n",
+        "  for each_char in my_list:\n",
+        "    if each_char == my_char.lower():\n",
+        "      return True\n",
+        "  return False\n",
+        "inList('H')"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SLpNGCWYn6Er",
+        "outputId": "6350d549-1269-4616-fc8b-048fb57f7165",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "inList('Z', ['x', 'y', 'z'])"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "r_KUNOW3rCc6",
+        "outputId": "6c5b5cca-0787-4110-ae76-7f5aeb946dc6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Write a function to check whether a given number belongs to fibonacci series or not\n",
+        "\n",
+        "n = int(input(\"Enter a number: \"))\n",
+        "def perfect_square(m):\n",
+        "  n = int(math.sqrt(m))\n",
+        "  return n * n == m\n",
+        "\n",
+        "def fibonacci(m):\n",
+        "  return perfect_square(5 * m * m + 4) or perfect_square(5 * m * m - 4)\n",
+        "print(f'{n} is a fibonacci number') if (fibonacci(n) == True) else print(f'{n} is not a fibonacci number')"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 5\n",
+            "5 is a fibonacci number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3hfExC9BPkKK"
+      },
+      "source": [
+        "Reference: [Python Documentation on Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)"
+      ]
+    }
+  ]
+}
